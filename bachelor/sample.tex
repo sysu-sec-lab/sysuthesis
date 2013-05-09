@@ -15,7 +15,7 @@
 \documentclass[UTF8, colorlinks, notocbibind]{pkuthss}
 
 % 使用 biblatex 排版参考文献，并规定其格式。
-\usepackage[backend = biber, style = caspervector, utf8]{biblatex}
+\usepackage[backend = biber, style = sysu, utf8]{biblatex}
 % 使得打字机粗体可以被使用。
 \usepackage{lmodern}
 % 产生 originauth.tex 里的 \square。
@@ -57,7 +57,9 @@
 	ekeywords = {\LaTeX2e{}, typesetting, document class, \CTeX{}}
 }
 % 导入参考文献数据库（注意不要省略“.bib”）。
-\addbibresource{pkuthss.bib}
+\addbibresource{sample.bib}
+
+%\includeonly{chap/chap1, chap/chap2}
 
 \begin{document}
 	% 以下为正文之前的部分。
