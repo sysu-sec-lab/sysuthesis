@@ -36,14 +36,21 @@ _SYSUTHESIS_ 并不是一个重新实现的模板，因为 _PKUTHSS_ 已经很�
     make clean
 
 ## Tips ##
-1. 一些文本内容（如系统输出）可以放入`vervatim`文件夹；
+1. 一些文本内容（如系统输出）可以放入`verbatim`文件夹；
 2. 如果不需要每章从奇数页开始（如盲审要求），可以在`pkuthss.cls`中的 **\LoadClass** 参数中添加 _openany_ ：
 
         \LoadClass[fntef,a4paper,fancyhdr,cs4size,openany]{ctexbook}[2009/10/20]
 
-3. `sample.pdf`文档本身提供了很多帮助，可以细读一下，如果仍不能满足要求，可以自定义`pkuthss.cls`和`pkuthss-utf8.def`两个文件；
+3. `sample.pdf`文档本身提供了很多帮助（也可通过 _texdoc pkuthss_ 命令查看），可以细读一下，如果仍不能满足要求，可以自定义`pkuthss.cls`和`pkuthss-utf8.def`两个文件；
 4. 一个据说不错的[中文LaTeX课程](http://math.ecnu.edu.cn/~latex/ "LaTeX 科技排版")，华东师大出品。
+5. 有关中文`biblatex`格式，可参考`pkuthss.bib`中的例子，以及`caspervector`文档（提供了引用 _专利_ 的格式）：
+        
+        texdoc caspervector
+   
+   需要注意的是，中文引用记得加上： _userf = {zh}_ 或 _userf = {cn}_ 字段。
+   另外，添加 _type_ 字段才会显示相应的标志代码，如 _[C]_ 。
 
+6. 需要编译部分章节？可以在 `\begin{document}` 之前添加 `\includeonly{chap/chapx}` 。
 
 ## FAQ ##
 1. Windows与Linux某发行版下编译有问题
@@ -58,3 +65,5 @@ _SYSUTHESIS_ 并不是一个重新实现的模板，因为 _PKUTHSS_ 已经很�
 ## TODO ##
 * 重新用PostScript绘制中大logo（已完成，使用了[官方](http://home3.sysu.edu.cn/sysuvi/index.html)矢量图，感谢markh。）
 * 继续深度修改使更和谐易用
+* 修改论文格式和引用格式使符合[要求](http://graduate.sysu.edu.cn/Item/1880.aspx)
+* 深度修改后在LPPL协议下重新发布论文模板和参考文献模板
